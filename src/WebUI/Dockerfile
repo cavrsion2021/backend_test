@@ -4,15 +4,13 @@ FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
-COPY ["WebUI/Anagrama.Api.WebUI.xml", "./"]
-COPY ["Application/Anagrama.Api.Application.xml", "./"]
+COPY ["src/Application/Anagrama.Api.Application.xml", "./"]
+COPY ["src/WebUI/Anagrama.Api.WebUI.xml", "./"]
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
 COPY ["src/WebUI/WebUI.csproj", "src/WebUI/"]
-COPY ["src/WebUI/Anagrama.Api.WebUI.xml", "./"]
 COPY ["src/Application/Application.csproj", "src/Application/"]
-COPY ["src/Application/Anagrama.Api.Application.xml", "./"]
 COPY ["src/Domain/Domain.csproj", "src/Domain/"]
 COPY ["src/Infrastructure/Infrastructure.csproj", "src/Infrastructure/"]
 RUN dotnet restore "src/WebUI/WebUI.csproj"
