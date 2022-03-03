@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Anagrama.Api.WebUI</name>
+    </assembly>
+    <members>
+        <member name="M:Anagrama.Api.WebUI.Controllers.ApiControllerBase.Command``2(``0)">
+            <summary>
+            
+            </summary>
+            <typeparam name="Request"></typeparam>
+            <typeparam name="Response"></typeparam>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Anagrama.Api.WebUI.Controllers.ApiControllerBase.Query``2(``0)">
+            <summary>
+            
+            </summary>
+            <typeparam name="Request"></typeparam>
+            <typeparam name="Response"></typeparam>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Anagrama.Api.WebUI.Controllers.WordController.GetAll(Anagrama.Api.Application.Features.Words.Queries.GetAll.GetAllWordRequest)">
+             <summary>
+             Consultar Words
+             </summary>
+             <remarks>
+             Obtiene los registros para la entidad <code>Word</code> de acuerdo a los filtros entregados con la clase <code>GetAllWordRequest</code>
+             
+             Ejemplo de consumo:
+            
+                 GET /api/Word/GetAll?Id=1&amp;FirstWord=A&amp;SecondWord=a&amp;PageNumber=1&amp;PageSize=10
+             </remarks>
+             <param name="request">Filtro para obtener los datos</param>
+             <response code="200">Retorna los datos para el filtro entregado</response>
+        </member>
+        <member name="T:Anagrama.Api.WebUI.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Anagrama.Api.WebUI.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:Anagrama.Api.WebUI.Startup.Configuration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Anagrama.Api.WebUI.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:Anagrama.Api.WebUI.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+        <member name="F:Anagrama.Api.WebUI.Support.Configuration.Configuration.SwaggerConfiguration.Version1">
+            <summary>
+            Swagger Version.
+            </summary>
+        </member>
+        <member name="F:Anagrama.Api.WebUI.Support.Configuration.Configuration.SwaggerConfiguration.Title">
+            <summary>
+            Swagger TermsOfService.
+            </summary>
+        </member>
+        <member name="F:Anagrama.Api.WebUI.Support.Configuration.Configuration.SwaggerConfiguration.Description">
+            <summary>
+            Swagger Description.
+            </summary>
+        </member>
+        <member name="F:Anagrama.Api.WebUI.Support.Configuration.Configuration.SwaggerConfiguration.TermsOfService">
+            <summary>
+            Swagger TermsOfService.
+            </summary>
+        </member>
+        <member name="F:Anagrama.Api.WebUI.Support.Configuration.Configuration.SwaggerConfiguration.ContactName">
+            <summary>
+            Swagger ContactName.
+            </summary>
+        </member>
+        <member name="F:Anagrama.Api.WebUI.Support.Configuration.Configuration.SwaggerConfiguration.ContactEmail">
+            <summary>
+            Swagger ContactEmail.
+            </summary>
+        </member>
+        <member name="F:Anagrama.Api.WebUI.Support.Configuration.Configuration.SwaggerConfiguration.ContactUrl">
+            <summary>
+            Swagger ContactUrl.
+            </summary>
+        </member>
+    </members>
+</doc>
